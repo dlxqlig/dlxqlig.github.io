@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Linux ALSA driver | 大江东去</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="随遇而安，随缘自在">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/assets/css/0.styles.9a687749.css" as="style"><link rel="preload" href="/assets/js/app.01a85cfe.js" as="script"><link rel="preload" href="/assets/js/3.f90640b6.js" as="script"><link rel="preload" href="/assets/js/1.1376f4e6.js" as="script"><link rel="preload" href="/assets/js/28.4d406a91.js" as="script"><link rel="prefetch" href="/assets/js/10.9862b8da.js"><link rel="prefetch" href="/assets/js/11.d0198b0c.js"><link rel="prefetch" href="/assets/js/12.aa41d518.js"><link rel="prefetch" href="/assets/js/13.a5547662.js"><link rel="prefetch" href="/assets/js/14.61355d93.js"><link rel="prefetch" href="/assets/js/15.2e9b1a09.js"><link rel="prefetch" href="/assets/js/16.b9dc4bd6.js"><link rel="prefetch" href="/assets/js/17.619da5fd.js"><link rel="prefetch" href="/assets/js/18.6ca9d6a1.js"><link rel="prefetch" href="/assets/js/19.9bbd4300.js"><link rel="prefetch" href="/assets/js/20.2231682b.js"><link rel="prefetch" href="/assets/js/21.ff20d482.js"><link rel="prefetch" href="/assets/js/22.49fda459.js"><link rel="prefetch" href="/assets/js/23.2e1f9058.js"><link rel="prefetch" href="/assets/js/24.cc1324c5.js"><link rel="prefetch" href="/assets/js/25.b529529b.js"><link rel="prefetch" href="/assets/js/26.6a163e95.js"><link rel="prefetch" href="/assets/js/27.691cb705.js"><link rel="prefetch" href="/assets/js/29.5ddfdd21.js"><link rel="prefetch" href="/assets/js/30.1a1e5a8a.js"><link rel="prefetch" href="/assets/js/31.43bcb338.js"><link rel="prefetch" href="/assets/js/32.dc17fce3.js"><link rel="prefetch" href="/assets/js/33.2d95c7b2.js"><link rel="prefetch" href="/assets/js/34.fc27a8b7.js"><link rel="prefetch" href="/assets/js/35.1b9fbfff.js"><link rel="prefetch" href="/assets/js/36.30847298.js"><link rel="prefetch" href="/assets/js/37.2e0d2cf5.js"><link rel="prefetch" href="/assets/js/38.975a3824.js"><link rel="prefetch" href="/assets/js/39.fdff89f9.js"><link rel="prefetch" href="/assets/js/4.e81157a3.js"><link rel="prefetch" href="/assets/js/40.56feb6e8.js"><link rel="prefetch" href="/assets/js/41.3bda5e2f.js"><link rel="prefetch" href="/assets/js/42.be999e8e.js"><link rel="prefetch" href="/assets/js/43.b59f42c6.js"><link rel="prefetch" href="/assets/js/44.03a4c46b.js"><link rel="prefetch" href="/assets/js/45.74c00333.js"><link rel="prefetch" href="/assets/js/46.a220de9a.js"><link rel="prefetch" href="/assets/js/47.d053f1d4.js"><link rel="prefetch" href="/assets/js/48.a0424114.js"><link rel="prefetch" href="/assets/js/49.f78792be.js"><link rel="prefetch" href="/assets/js/5.6f6118c9.js"><link rel="prefetch" href="/assets/js/50.d3ba1479.js"><link rel="prefetch" href="/assets/js/51.6de88c25.js"><link rel="prefetch" href="/assets/js/52.99dbec0b.js"><link rel="prefetch" href="/assets/js/53.89c4286e.js"><link rel="prefetch" href="/assets/js/54.bda46619.js"><link rel="prefetch" href="/assets/js/55.0af8d9f6.js"><link rel="prefetch" href="/assets/js/56.c7688761.js"><link rel="prefetch" href="/assets/js/57.f099a44c.js"><link rel="prefetch" href="/assets/js/58.a93ee56c.js"><link rel="prefetch" href="/assets/js/59.e99f601b.js"><link rel="prefetch" href="/assets/js/6.c5b53aee.js"><link rel="prefetch" href="/assets/js/60.01eba859.js"><link rel="prefetch" href="/assets/js/61.116c0001.js"><link rel="prefetch" href="/assets/js/62.44555829.js"><link rel="prefetch" href="/assets/js/63.e9c76b5d.js"><link rel="prefetch" href="/assets/js/64.f4bbbcbc.js"><link rel="prefetch" href="/assets/js/65.768f06ee.js"><link rel="prefetch" href="/assets/js/66.adccfac7.js"><link rel="prefetch" href="/assets/js/67.1c62b5b5.js"><link rel="prefetch" href="/assets/js/68.d809676c.js"><link rel="prefetch" href="/assets/js/69.68af19e0.js"><link rel="prefetch" href="/assets/js/7.f9494639.js"><link rel="prefetch" href="/assets/js/70.8cf0c4c7.js"><link rel="prefetch" href="/assets/js/8.f0ef8ac2.js"><link rel="prefetch" href="/assets/js/9.0b6c59e6.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9a687749.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-19557b78><div data-v-19557b78><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-19557b78 data-v-19557b78><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-19557b78 data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>大江东去</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>xqlig</span>
+            
+          <!---->
+          2020
+        </a></span></div></div> <div class="hide" data-v-19557b78><header class="navbar" data-v-19557b78><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="大江东去" class="logo"> <span class="site-name">大江东去</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/blockchain/" class="nav-link"><i class="iconfont undefined"></i>
+  blockchain
+</a></li><li class="dropdown-item"><!----> <a href="/categories/economic/" class="nav-link"><i class="iconfont undefined"></i>
+  economic
+</a></li><li class="dropdown-item"><!----> <a href="/categories/tech/" class="nav-link"><i class="iconfont undefined"></i>
+  tech
+</a></li><li class="dropdown-item"><!----> <a href="/categories/culture/" class="nav-link"><i class="iconfont undefined"></i>
+  culture
+</a></li><li class="dropdown-item"><!----> <a href="/categories/other/" class="nav-link"><i class="iconfont undefined"></i>
+  other
+</a></li><li class="dropdown-item"><!----> <a href="/categories/eda/" class="nav-link"><i class="iconfont undefined"></i>
+  eda
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/dlxqlig" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-19557b78></div> <aside class="sidebar" data-v-19557b78><div class="personal-info-wrapper" data-v-042e23d4><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-042e23d4> <h3 class="name" data-v-042e23d4>
+    xqlig
+  </h3> <div class="num" data-v-042e23d4><div data-v-042e23d4><h3 data-v-042e23d4>60</h3> <h6 data-v-042e23d4>Article</h6></div> <div data-v-042e23d4><h3 data-v-042e23d4>112</h3> <h6 data-v-042e23d4>Tag</h6></div></div> <hr data-v-042e23d4></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/blockchain/" class="nav-link"><i class="iconfont undefined"></i>
+  blockchain
+</a></li><li class="dropdown-item"><!----> <a href="/categories/economic/" class="nav-link"><i class="iconfont undefined"></i>
+  economic
+</a></li><li class="dropdown-item"><!----> <a href="/categories/tech/" class="nav-link"><i class="iconfont undefined"></i>
+  tech
+</a></li><li class="dropdown-item"><!----> <a href="/categories/culture/" class="nav-link"><i class="iconfont undefined"></i>
+  culture
+</a></li><li class="dropdown-item"><!----> <a href="/categories/other/" class="nav-link"><i class="iconfont undefined"></i>
+  other
+</a></li><li class="dropdown-item"><!----> <a href="/categories/eda/" class="nav-link"><i class="iconfont undefined"></i>
+  eda
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/dlxqlig" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Linux ALSA driver</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blogs/tech/2020/052701.html#_1-alsa简介" class="sidebar-link">1. ALSA简介</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blogs/tech/2020/052701.html#_2-alsa设备文件结构" class="sidebar-link">2. ALSA设备文件结构</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blogs/tech/2020/052701.html#_3-asoc" class="sidebar-link">3. ASOC</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blogs/tech/2020/052701.html#_4-i2s协议" class="sidebar-link">4. I2S协议</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blogs/tech/2020/052701.html#_5-platform-codec和machine驱动" class="sidebar-link">5. platform codec和machine驱动</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blogs/tech/2020/052701.html#platform" class="sidebar-link">Platform</a></li><li class="sidebar-sub-header"><a href="/blogs/tech/2020/052701.html#codec" class="sidebar-link">Codec</a></li><li class="sidebar-sub-header"><a href="/blogs/tech/2020/052701.html#machine" class="sidebar-link">Machine</a></li><li class="sidebar-sub-header"><a href="/blogs/tech/2020/052701.html#dai时钟设置" class="sidebar-link">dai时钟设置</a></li><li class="sidebar-sub-header"><a href="/blogs/tech/2020/052701.html#dapm-动态音频管理" class="sidebar-link">DAPM(动态音频管理)</a></li><li class="sidebar-sub-header"><a href="/blogs/tech/2020/052701.html#pcm-dma" class="sidebar-link">PCM DMA</a></li></ul></li><li><a href="/blogs/tech/2020/052701.html#_6-典型嵌入式音频通路" class="sidebar-link">6.典型嵌入式音频通路</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blogs/tech/2020/052701.html#linux-kernel-alsa-dpcm-document" class="sidebar-link">linux kernel alsa dpcm document</a></li></ul></li><li><a href="/blogs/tech/2020/052701.html#连接" class="sidebar-link">连接</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>Linux ALSA driver</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>xqlig</span>
+            
+          <!---->
+          2020
+        </a></span></div></div> <div data-v-19557b78><main class="page"><div class="page-title" style="display:none;"><h1>Linux ALSA driver</h1> <hr> <div data-v-34ea29db><i class="iconfont reco-account" data-v-34ea29db><span data-v-34ea29db>xqlig</span></i> <i class="iconfont reco-date" data-v-34ea29db><span data-v-34ea29db>2020-05-27</span></i> <!----> <i class="iconfont reco-tag tags" data-v-34ea29db><span class="tag-item" data-v-34ea29db>linux</span><span class="tag-item" data-v-34ea29db>kernel</span><span class="tag-item" data-v-34ea29db>tech</span><span class="tag-item" data-v-34ea29db>audio</span><span class="tag-item" data-v-34ea29db>ALSA</span><span class="tag-item" data-v-34ea29db>asoc</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h2 id="_1-alsa简介"><a href="#_1-alsa简介" class="header-anchor">#</a> 1. ALSA简介</h2> <p>ALSA是Advanced Linux Sound Architecture 的缩写，目前已经成为了linux的主流音频体系结构。
+在内核设备驱动层，ALSA提供了alsa-driver，同时在应用层，ALSA为我们提供了alsa-lib，应用程序只要调用alsa-lib提供的API，即可以完成对底层音频硬件的控制。</p> <ul><li>alsa application:aplay，arecord，amixer，是alsa-tools中提供的上层调试工具，用户可以直接将其移植到自己所需要的平台，这些应用可以用来实现playback，capture，controls等。</li> <li>alsa API:alsa 用户库接口，常见有alsa-lib。(alsa-tools中的应用程序基于alsa-lib提供的api来实现)。</li> <li>alsa core:alsa　核心层，向上提供逻辑设备(pcm/ctl/midi/timer/。。)系统调用，向下驱动硬件设备(Machine/i2s/dma/codec)。</li> <li>asoc core:asoc是建立在标准alsa core基础上，为了更好支持嵌入式系统和应用于移动设备的音频codec的一套软件体系。</li> <li>hardware driver:音频硬件设备驱动，由三大部分组成，分别是machine，platform，codec。</li></ul> <p><img src="/assets/img/alsa-arch.4063d447.png" alt="arch"></p> <h2 id="_2-alsa设备文件结构"><a href="#_2-alsa设备文件结构" class="header-anchor">#</a> 2. ALSA设备文件结构</h2> <p>alsa驱动的设备文件结构:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>cd /dev/snd
+ls -l
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><table><thead><tr><th>设备</th> <th style="text-align:center;">说明</th></tr></thead> <tbody><tr><td>controlC0</td> <td style="text-align:center;">用于声卡的控制</td></tr> <tr><td>midiC0D0</td> <td style="text-align:center;">用于播放midi音频</td></tr> <tr><td>pcmC0D0c</td> <td style="text-align:center;">用于录音的pcm设备</td></tr> <tr><td>pcmC0D0p</td> <td style="text-align:center;">用于播放的pcm设备</td></tr> <tr><td>seq</td> <td style="text-align:center;">音序器</td></tr> <tr><td>timer</td> <td style="text-align:center;">定时器</td></tr></tbody></table> <p>device种类：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code> SNDRV_DEV_LOWLEVEL
+ SNDRV_DEV_INFO
+ SNDRV_DEV_BUS，
+ SNDRV_DEV_CODEC
+ SNDRV_DEV_PCM
+ SNDRV_DEV_COMPRESS
+ SNDRV_DEV_RAWMIDI
+ SNDRV_DEV_TIMER
+ SNDRV_DEV_SEQUENCER
+ SNDRV_DEV_HWDEP
+ SNDRV_DEV_JACK
+ SNDRV_DEV_CONTROL
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>驱动加载后，card和devices关系结构，pcm和control是最重要的两个device，并在dev，sys class下构建了各种设备节点。</p> <p><img src="/assets/img/alsa-1.1d0eb65a.png" alt="arch"></p> <h2 id="_3-asoc"><a href="#_3-asoc" class="header-anchor">#</a> 3. ASOC</h2> <p>ALSA System on Chip，是建立在标准的ALSA驱动之上，为了更好支持嵌入式系统和应用于移动设备的音频codec的一套软件体系，它依赖与标准ALSA驱动框架。内核文档Documentation/alsa/soc/overview。txt中详细介绍了ASoC的设计初衷，这里不一一引用，简单陈述如下：</p> <ul><li>独立的codec驱动，标准的ALSA驱动框架里面codec驱动往往与SoC/CPU耦合过于紧密，不利于在多样化的平台/机器上移植复用。</li> <li>方便codec与Soc通过PCM/I2S总线建立连接</li> <li>动态音频电源管理DAPM，使得codec任何时候都工作在最低功耗状态，同时负责音频路由的创建</li> <li>POPs和click音频抑制弱化处理，在ASoC中通过正确的音频部件上下电次序来实现</li> <li>Machine驱动的特定控制，比如耳机，麦克风的插拔检测，外放功放的开关</li></ul> <h2 id="_4-i2s协议"><a href="#_4-i2s协议" class="header-anchor">#</a> 4. I2S协议</h2> <p><img src="/assets/img/i2s.df02d30c.png" alt="I2S"></p> <p>CLK:位时钟，对应数字音频的每一位数据；BCKL = 声道数<em>采样频率</em>采样位数；
+LRCLK:帧时钟，构成一个完整的声音单元；双声道的情况下，LRCKL=0时表示是左声道的数据，＝１时表示是右声道的数据；LRCLK=采样频率；
+DACDAT:下行数据；
+ADCDAT:上行数据；
+数据的最高位总是出现在LRCKL跳变后的第２个BCLK脉冲处；</p> <h2 id="_5-platform-codec和machine驱动"><a href="#_5-platform-codec和machine驱动" class="header-anchor">#</a> 5. platform codec和machine驱动</h2> <h3 id="platform"><a href="#platform" class="header-anchor">#</a> Platform</h3> <p>cpu dai:在嵌入式系统里面通常指soc的i2s，pcm总线控制器，负责把音频数据通过I2S tx FIFO传输到codec(playback，capture则相反)。cpu_dai:通过 snd_soc_register_dai()来注册。注：DAI是Digital Audio Interface的简称，分为cpu_dai和codec_dai，这两者通过I2S/PCM总线连接；AIF是Audio Interface母的简称，嵌入式系统中一般是I2S和PCM接口。</p> <p>PCM DMA:负责把dma buffer中的音频数据搬运到i2s tx fifo。在某些情形下是不需要dma介入，比如modem和codec直连，因为modem本身已经把数据送到fifo了，这时只需要启动codec_dai接收数据即可；该情形下，machine驱动dai_link中需要设定。platform_name = &quot;snd_soc_dummy&quot;，这是虚拟dma驱动，实现见sound/soc/soc-utils。c。 音频dma驱动通过 snd_soc_register_platform()来注册，故也常用platform来指代音频dma驱动(这里的platform需要与soc platfrom区分开）。</p> <h3 id="codec"><a href="#codec" class="header-anchor">#</a> Codec</h3> <p>对于playback来说，userspace送过来的音频数据是经过采样量化的数字信号，在codec经过DAC转换成模拟信号然后输出到外放或耳机，这样我么你就可以听到声音了。codec字面意思是编解码器，但芯片(codec)里面的功能部件很多，常见的有AIF，DAC，ADC，Mixer，PGA，line-in，line-out。有些高端的codec芯片还有EQ，DSP，SRC，DRC，AGC，Echo-Canceller，Noise-Suppression等部件。</p> <h3 id="machine"><a href="#machine" class="header-anchor">#</a> Machine</h3> <p>通过配置dai_link把cpu_dai，codec_dai，modem_dai各个音频接口给链结成音频链路，然后注册snd_soc_card。和上面两个不一样，platform和codec驱动一般是可以重用的，而machine有它特定的硬件特性，几乎是不可重用的。所谓的硬件特性指：Soc Platform与Codec的差异；DAIs之间的链结方式；通过某个GPIO打开Amplifier；通过某个GPIO检测耳机插拔；使用某个时钟如MCLK/External-OSC作为i2s，CODEC的时钟源等。
+dai_link:machine驱动中定义的音频数据链路，它指定链路用到的codec，codec_dai，cpu_dai，platform，一个系统可能有多个音频数据链路，比如media和voice，因此可以定义多个dai_link。如wm8994的典型设计，有三个dai_link，分别是API&lt;&gt;AIF1的&quot;HIFI&quot;(多媒体声音链路)，BP&lt;&gt;AIF2的“voice”（通话语音链路），以及BT&lt;&gt;AIF3(蓝牙sco语音链路)。</p> <h3 id="dai时钟设置"><a href="#dai时钟设置" class="header-anchor">#</a> dai时钟设置</h3> <p>对于dai(codec_dai和cpu_dai)，都要非常留意时钟设置，它很关键又复杂，设置错误将会导致很多问题，典型如下：</p> <ul><li>系统无声：检查codec系统时钟，codec_dai位时钟和帧时钟是否使能；</li> <li>声音失真：检查音频数据的采样率是否和codec_dai帧时钟一致；</li> <li>断续破音：检查codec系统时钟和位时钟，帧时钟是否同步，出现这种情况，可能是因为sysclk和BCKL/LRCLK不是由同一个时钟源分频出来的。</li> <li>i2s通信不成功：若codec做从，MCLK有soc这边提供，在i2s通信之前，一定要确保mclk已经提供给codec。</li></ul> <h3 id="dapm-动态音频管理"><a href="#dapm-动态音频管理" class="header-anchor">#</a> DAPM(动态音频管理)</h3> <p>为移动linux设备设计，使得音频系统任何时候都工作在最低功耗状态。当音频路劲发生改变(比如上层使用amxier工具设置音频通路)时，或发生数据流事件(比如启动或停止播放)时，都会触发dapm去遍历所有邻近的音频部件，检查是否存在完整的音频路径(complete path:满足条件的音频路径，该路径上任意一个部件往前遍历能到达输入端点如DAC/MiC/Linein，往后遍历能到达输出端点如ADC/HP/SPK)，如果存在完整的音频路径，则该路劲上面的所有部件都是需要上电的，其他部件则下电。
+部件上下电都是dapm根据策略自主控制的，外部无法干预，可以说dapm是一个专门为音频系统设计的自成体系的电源管理模块，独立于linux电源管理之外。即使soc休眠了，codec仍可以在正常工作，试想下这个情景：语音通话，modem_dai连接到codec_dai，语音数据不经过soc，因此这种情形下soc可以进入睡眠以降低功耗，只保持codec正常工作就行了。
+而音频部件由于上下点瞬间的瞬态冲击会产生爆破音，我们称之为POPs。POPs是电气特性，我们无法彻底消除，只能硬件软件上优化消弱到人耳辨识不出的程度。DAPM中，部件的上下电有严格的顺序以抑制爆破音，总的来说：上电次序是从输入端点到输出端点，下电次序是从输出端点到输入端点。</p> <p>widget指音频系统中的某个部件，比如mixer，mux，输入输出引脚，电源供应器等等，甚至，我们可以定义虚拟的widget，例如playback stream widget。widget把kcontrol和动态电源管理进行了有机的结合，同时还具备音频路径的连结功能，一个widget可以与它相邻的widget有某种动态的连结关系。</p> <table><thead><tr><th>dapm widget</th> <th style="text-align:center;">说明</th></tr></thead> <tbody><tr><td>snd_soc_dapm_input</td> <td style="text-align:center;">输入引脚</td></tr> <tr><td>snd_soc_dapm_output</td> <td style="text-align:center;">输出引脚</td></tr> <tr><td>snd_soc_dapm_mux</td> <td style="text-align:center;">mux控件</td></tr> <tr><td>snd_soc_dapm_mixer</td> <td style="text-align:center;">mixer控件</td></tr> <tr><td>snd_soc_dapm_pga</td> <td style="text-align:center;">可编程增益控件</td></tr> <tr><td>snd_soc_dapm_adc</td> <td style="text-align:center;">ADC控件</td></tr> <tr><td>snd_soc_dapm_dac</td> <td style="text-align:center;">DAC控件</td></tr> <tr><td>snd_soc_dapm_micbias</td> <td style="text-align:center;">麦克风偏置电压控件</td></tr> <tr><td>snd_soc_dapm_mic</td> <td style="text-align:center;">mic</td></tr> <tr><td>snd_soc_dapm_hp</td> <td style="text-align:center;">耳机</td></tr> <tr><td>snd_soc_dapm_spk</td> <td style="text-align:center;">扬声器</td></tr> <tr><td>snd_soc_dapm_aif_in</td> <td style="text-align:center;">数字音频输入接口</td></tr> <tr><td>snd_soc_dapm_aif_out</td> <td style="text-align:center;">数字音频输出接口</td></tr> <tr><td>snd_soc_dapm_dai_in</td> <td style="text-align:center;">输入DAI</td></tr> <tr><td>snd_soc_dapm_dai_out</td> <td style="text-align:center;">输出DAI</td></tr> <tr><td>snd_soc_dapm_dai_link</td> <td style="text-align:center;">DAI link</td></tr></tbody></table> <p>widget之间的连接器：path
+之前已经提到，一个widget是有输入和输出的，而且widget之间是可以动态地进行连接的，那它们是用什么来连接两个widget的呢？DAPM为我们提出了path这一概念，path相当于电路中的一根跳线，它把一个widget的输出端和另一个widget的输入端连接在一起。</p> <p><img src="/assets/img/widgets-path.3927facd.png" alt="widget"></p> <h3 id="pcm-dma"><a href="#pcm-dma" class="header-anchor">#</a> PCM DMA</h3> <p>pcm数据管理可以说是alsa系统中最核心的部分，这部分的工作有两个(回放情形)：</p> <p>copy_from_user把用户态的音频数据拷贝到dma buffer中，启动dma设备把音频数据从dma buffer传送到i2s tx FIFO。
+当数据送到i2s tx FIFO后，剩下的是启动i2s控制器把数据传送到codec，然后DAC把音频数字信号转换成模拟信号，在输出到SPK/HP。</p> <p>为什么要使用dma传输？</p> <ul><li>首先在数据传输过程中，不需要cpu的参与，节省cpu的开销</li> <li>传输速度快，提高硬件设备的吞吐量。</li></ul> <h2 id="_6-典型嵌入式音频通路"><a href="#_6-典型嵌入式音频通路" class="header-anchor">#</a> 6.典型嵌入式音频通路</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>+------------+        +---------------------+        +------------+
+|            |        |                     |        |            |
+|            |        +        CODEC        +        |            |
+|     AP     +------&gt;AIF1                 AIF3+------&gt;     PA     +-&gt;SPK
+|            |        +   +-----+ +-----+   +        |            |
+|            |        |   | DSP | | DAC |   |        |            |
++------------+        |   +-----+ +-----+   |        +------------+
+                      |   +-----+ +-----+   |
+                      |   | DSP | | DAC |   |
+                      |   +-----+ +-----+   |
++------------+        |   +-----+ +-----+   |        +------------+
+|            |        |   | DSP | | ADC |   |        |            |
+|            |        +   +-----+ +-----+   +        |            |
+|     BB     +------&gt;AIF2 +-----+ +-----+ AIF4+------&gt;    BTSCO   |
+|            |        +   | DSP | | ADC |   +        |            |
+|            |        |   +-----+ +-----+   |        |            |
++------------+        +----------+----------+        +------------+
+                          |      |     |
+                          +MIC   +HP   +EARP
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>组成了４个音频链路(dai_link):</p> <p>AP&lt;-&gt;AIF1:AP(应用处理器)与codec之间的链路，多媒体声音
+BB&lt;-&gt;AIF2:BB(基带处理器)与codec之间的链路，通话语音
+PA&lt;-&gt;AIF3:PA(智能功率放大器)与codec之间的链路，外放输出
+BTSCO&lt;-&gt;AIF4:BTSCO(蓝牙)与codec之间的链路，蓝牙耳机输出</p> <h3 id="linux-kernel-alsa-dpcm-document"><a href="#linux-kernel-alsa-dpcm-document" class="header-anchor">#</a> linux kernel alsa dpcm document</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+手机Audio System with SoC based DSP
+-------------------------------------
+
+::
+
+  | Front End PCMs    |  SoC DSP  | Back End DAIs | Audio devices |
+  
+                      *************
+  PCM0 &lt;------------&gt; *           * &lt;----DAI0-----&gt; Codec Headset
+                      *           *
+  PCM1 &lt;------------&gt; *           * &lt;----DAI1-----&gt; Codec Speakers
+                      *   DSP     *
+  PCM2 &lt;------------&gt; *           * &lt;----DAI2-----&gt; MODEM
+                      *           *
+  PCM3 &lt;------------&gt; *           * &lt;----DAI3-----&gt; BT
+                      *           *
+                      *           * &lt;----DAI4-----&gt; DMIC
+                      *           *
+                      *           * &lt;----DAI5-----&gt; FM
+                      *************
+
+
+此图显示了一个简单的智能手机音频子系统。它支持蓝牙、调频数字收音机、扬声器、耳机、麦克，modem。
+此声卡公开了4个DSP前端（FE）ALSA PCM设备和支持6个后端（BE）DAIs。每个FE-PCM可以将音频数据以数字方式路由到任何
+FE-PCM设备还可以将音频路由到1个以上的BE-DAI
+
+
+DPCM 从DAI0切换DAI1
+---------------------------------------------------
+考虑如下场景，正在向耳机播放音频。过一段时间后，用户将耳机取出扬声器上继续播放音频。
+
+PCM0的通路link链接如下所示 :
+::
+
+                      *************
+  PCM0 &lt;============&gt; *           * &lt;====DAI0=====&gt; Codec Headset
+                      *           *
+  PCM1 &lt;------------&gt; *           * &lt;----DAI1-----&gt; Codec Speakers
+                      *   DSP     *
+  PCM2 &lt;------------&gt; *           * &lt;----DAI2-----&gt; MODEM
+                      *           *
+  PCM3 &lt;------------&gt; *           * &lt;----DAI3-----&gt; BT
+                      *           *
+                      *           * &lt;----DAI4-----&gt; DMIC
+                      *           *
+                      *           * &lt;----DAI5-----&gt; FM
+                      *************
+
+耳机从jack移除之后的通路：
+::
+
+                      *************
+  PCM0 &lt;============&gt; *           * &lt;----DAI0-----&gt; Codec Headset
+                      *           *
+  PCM1 &lt;------------&gt; *           * &lt;====DAI1=====&gt; Codec Speakers
+                      *   DSP     *
+  PCM2 &lt;------------&gt; *           * &lt;----DAI2-----&gt; MODEM
+                      *           *
+  PCM3 &lt;------------&gt; *           * &lt;----DAI3-----&gt; BT
+                      *           *
+                      *           * &lt;----DAI4-----&gt; DMIC
+                      *           *
+                      *           * &lt;----DAI5-----&gt; FM
+                      *************
+
+驱动处理过程如下：
+
+1. Machine driver收到Jack移除事件。
+2. Machine driver或者audio HAL禁用耳机路径。
+3. DPCM在DAI0上运行PCM触发器（停止），hw_free（），shutdown（）操作耳机，因为该路径现在已禁用。
+4. Machine driver或者audio HAL启用扬声器路径。
+5。DPCM运行PCM ops进行startup（），hw_params（），prepare（）和
+    由于启用了路径，因此DAI1扬声器的触发（启动）。
+
+在此示例中，Machine driver或audio HAL可以更改路由，然后DPCM将负责管理DAI PCM操作，
+以使link向上或向下。在此过渡期间，音频播放不会停止。
+
+
+
+Hostless PCM streams
+====================
+
+hostless PCM stream 是未通过主机CPU路由的stream。例如，从手机到调制解调器的电话
+::
+
+                      *************
+  PCM0 &lt;------------&gt; *           * &lt;----DAI0-----&gt; Codec Headset
+                      *           *
+  PCM1 &lt;------------&gt; *           * &lt;====DAI1=====&gt; Codec Speakers/Mic
+                      *   DSP     *
+  PCM2 &lt;------------&gt; *           * &lt;====DAI2=====&gt; MODEM
+                      *           *
+  PCM3 &lt;------------&gt; *           * &lt;----DAI3-----&gt; BT
+                      *           *
+                      *           * &lt;----DAI4-----&gt; DMIC
+                      *           *
+                      *           * &lt;----DAI5-----&gt; FM
+                      *************
+
+In this case the PCM data is routed via the DSP。 The host CPU in this use case
+is only used for control and can sleep during the runtime of the stream。
+
+The host can control the hostless link either by :-
+
+ 1。 Configuring the link as a CODEC &lt;-&gt; CODEC style link。 In this case the link
+    is enabled or disabled by the state of the DAPM graph。 This usually means
+    there is a mixer control that can be used to connect or disconnect the path
+    between both DAIs。
+
+ 2。 Hostless FE。 This FE has a virtual connection to the BE DAI links on the DAPM
+    graph。 Control is then carried out by the FE as regular PCM operations。
+    This method gives more control over the DAI links， but requires much more
+    userspace code to control the link。 Its recommended to use CODEC&lt;-&gt;CODEC
+    unless your HW needs more fine grained sequencing of the PCM ops。
+在这种情况下，PCM数据通过DSP进行路由。主机CPU仅用于控制，可以在流运行时休眠。
+
+主机可以通过以下方式控制无主机链接：
+
+  1. 将链接配置为CODEC &lt;-&gt; CODEC样式链接。在这种情况下，链接由DAPM图形的状态启用或禁用。这通常意味着
+     有一个混音器控件，可用于连接或断开路径两个DAI之间。
+
+  2. HostlessFE。此FE与DAPM上的BE DAI链接具有虚拟连接。
+     然后，由FE作为常规PCM操作进行控制。这种方法可以更好地控制DAI链接，但需要更多功能
+     用户空间代码来控制链接。建议使用CODEC &lt;-&gt; CODEC除非您的硬件需要对PCM ops进行更细粒度的排序。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br></div></div><h2 id="连接"><a href="#连接" class="header-anchor">#</a> 连接</h2> <p><a href="https://blog.csdn.net/zyuanyun/article/details/59170418?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param" target="_blank" rel="noopener noreferrer">Linux ALSA 音频系统：物理链路篇
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <footer class="page-edit" style="display:none;"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">6/29/2020, 2:50:35 PM</span></div></footer> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-44bd5a18 data-v-44bd5a18><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-44bd5a18><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-44bd5a18></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-44bd5a18></path></svg></div></div></div>
+    <script src="/assets/js/app.01a85cfe.js" defer></script><script src="/assets/js/3.f90640b6.js" defer></script><script src="/assets/js/1.1376f4e6.js" defer></script><script src="/assets/js/28.4d406a91.js" defer></script>
+  </body>
+</html>
